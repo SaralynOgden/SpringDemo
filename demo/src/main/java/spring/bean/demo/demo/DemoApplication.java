@@ -13,9 +13,10 @@ public class DemoApplication {
         context.scan("spring.bean.demo.demo");
         context.refresh();
 
-        ComponentDemo componentDemo
-            = context.getBean(ComponentDemo.class);
-        componentDemo.demoFunction();
+        RecipesFromScratch recipesFromScratch
+            = context.getBean(RecipesFromScratch.class);
+
+        recipesFromScratch.getItalianBeanSoupIngredients();
  
         context.close();
     }
